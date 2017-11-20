@@ -1,4 +1,4 @@
-(defproject grafter/grafter "0.9.0"
+(defproject grafter/grafter "0.11.0-SNAPSHOT"
   :description "Tools for the hard graft of linked data processing"
   :url "http://grafter.org/"
   :license {:name "Eclipse Public License - v1.0"
@@ -17,7 +17,9 @@
                  [potemkin "0.4.3"]
                  [com.novemberain/pantomime "2.8.0"]] ;; mimetypes
 
-
+  :source-paths ["src" "deprecated/src"]
+  :test-paths ["test" "deprecated/test"]
+  
   :codox {:defaults {:doc "FIXME: write docs"
                      :doc/format :markdown}
           :output-dir "api-docs"
