@@ -1,4 +1,5 @@
-(ns grafter.rdf4j.io
+(ns ^{:added "0.12.0"}
+    grafter.rdf4j.io
   "Functions & Protocols for serializing Grafter Statements to (and from)
   any Linked Data format supported by RDF4j."
   (:require [clojure.java.io :as io]

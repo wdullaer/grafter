@@ -1,4 +1,4 @@
-(ns ^{:deprecated "0.11.0"}
+(ns ^{:deprecated "0.12.0"}
     grafter.rdf.sparql
   "DEPRECATED: Use grafter.rdf4j.sparql instead."
 

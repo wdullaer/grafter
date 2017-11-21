@@ -1,4 +1,5 @@
-(ns grafter.rdf4j.repository
+(ns ^{:added "0.12.0"}
+    grafter.rdf4j.repository
   "Functions for constructing and working with various RDF4j repositories."
   (:require [clojure.java.io :as io]
             [me.raynes.fs :as fs]

@@ -1,4 +1,4 @@
-(ns ^{:deprecated "0.11.0"}
+(ns ^{:deprecated "0.12.0"}
     grafter.rdf.protocols
   "DEPRECATED: Use grafter.core instead.
   
