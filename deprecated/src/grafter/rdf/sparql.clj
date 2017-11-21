@@ -1,4 +1,7 @@
-(ns grafter.rdf.sparql
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.sparql
+  "DEPRECATED: Use grafter.rdf4j.sparql instead."
+
   (:require [grafter.rdf :refer [statements]]
             [grafter.rdf.repository :refer [repo sparql-repo ->connection]]
             [grafter.rdf.repository :as repo]

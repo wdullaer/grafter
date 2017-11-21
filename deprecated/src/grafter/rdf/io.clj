@@ -1,5 +1,8 @@
-(ns grafter.rdf.io
-  "Functions & Protocols for serializing Grafter Statements to (and from)
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.io
+  "DEPRECATED.
+
+  Functions & Protocols for serializing Grafter Statements to (and from)
   any Linked Data format supported by Sesame."
   (:require [clojure.java.io :as io]
             [clojure.string :as string]

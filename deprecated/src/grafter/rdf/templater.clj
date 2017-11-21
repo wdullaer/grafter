@@ -1,5 +1,8 @@
-(ns grafter.rdf.templater
-  "Functions for converting tree's of turtle-like data into Linked
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.templater
+  "DEPRECATED.
+
+  Functions for converting tree's of turtle-like data into Linked
   Data statements (triples/quads)."
   (:require [grafter.rdf :as rdf]
             [grafter.url :as url]

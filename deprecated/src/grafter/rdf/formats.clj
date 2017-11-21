@@ -1,5 +1,8 @@
-(ns grafter.rdf.formats
-  "Symbols used to specify different Linked Data Serializations."
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.formats
+  "DEPRECATED.
+
+  Symbols used to specify different Linked Data Serializations."
   (:require [clojure.string :as string]
             [grafter.url :as url]
             [clojure.string :as str])

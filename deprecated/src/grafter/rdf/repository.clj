@@ -1,5 +1,8 @@
-(ns grafter.rdf.repository
-  "Functions for constructing and working with various Sesame repositories."
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.repository
+  "DEPRECATED.  Use grafter.rdf4j.repository instead.
+
+  Functions for constructing and working with various Sesame repositories."
   (:require [clojure.java.io :as io]
             [grafter.rdf]
             [me.raynes.fs :as fs]

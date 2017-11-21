@@ -1,5 +1,8 @@
-(ns grafter.rdf.protocols
-  "Grafter protocols and types for RDF processing"
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.protocols
+  "DEPRECATED: Use grafter.core instead.
+  
+  Grafter protocols and types for RDF processing"
   (:require [grafter.vocabularies.xsd :refer :all]
             [grafter.url :refer [->java-uri]])
   (:import [java.net URI]

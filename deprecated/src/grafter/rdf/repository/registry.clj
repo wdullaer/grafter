@@ -1,5 +1,8 @@
-(ns grafter.rdf.repository.registry
-  "Namespace containing functions to manage the global registry of
+(ns ^{:deprecated "0.11.0"}
+    grafter.rdf.repository.registry
+  "DEPRECATED.  
+
+  Namespace containing functions to manage the global registry of
   Sesame parsers.
 
   Normally you should not need to adjust the default global
