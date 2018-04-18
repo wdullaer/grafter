@@ -1,12 +1,13 @@
-(defproject grafter/grafter "0.11.3-SNAPSHOT"
+(defproject grafter/grafter "0.11.4-SNAPSHOT"
   :description "Tools for the hard graft of linked data processing"
   :url "http://grafter.org/"
   :license {:name "Eclipse Public License - v1.0"
             :url "https://www.eclipse.org/legal/epl-v10.html"}
 
   :deploy-repositories [["releases" :clojars]]
+  :repositories {"wdullaer-maven" {:url "s3p://wdullaer-maven/release"}}
 
-  :dependencies [[org.clojure/clojure "1.9.0-RC1"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.openrdf.sesame/sesame-runtime "2.8.9"]
                  [org.clojure/tools.logging "0.3.1"]
                  [grafter/url "0.2.5"]
@@ -17,6 +18,7 @@
                  [potemkin "0.4.3"]
                  [com.novemberain/pantomime "2.8.0"]] ;; mimetypes
 
+  :plugins [[s3-wagon-private "1.3.1"]]
 
   :codox {:defaults {:doc "FIXME: write docs"
                      :doc/format :markdown}

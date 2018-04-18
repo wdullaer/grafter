@@ -61,9 +61,13 @@
 (defn triplify
   "Takes many turtle like structures and converts them to a lazy-seq
   of grafter.rdf.protocols.IStatement's.  Users should generally tend
-  to prefer to using graph to triplify."
-  [& subjects]
-  (mapcat expand-subj subjects))
+  to prefer to using graph to triplify.
+
+  Returns a transducer if no templates are specified."
+  ([]
+   (mapcat expand-subj))
+  ([& subjects]
+   (mapcat expand-subj subjects)))
 
 (defn- quad
   "Build a quad from a graph and a grafter.rdf.protocols/Triple."
@@ -91,8 +95,21 @@
   For convenience strings in these templates are assumed to be URI's
   and are cast as such, as URI's are the most common type in linked
   data.  If you want an RDF string you should use the s function to
-  build one."
-  [graph-uri & triples]
+  build one.
+
+  Will return a transducer if only the graph-uri is specified."
+  ([graph-uri]
+   (comp
+     (triplify)
+     (map (partial quad graph-uri))))
+  ([graph-uri & triples]
+   (map (partial quad graph-uri)
+        (apply triplify triples))))
+
+(defn graph-seq
+  "Same as graph but takes a lazy seq rather than a vararg.
+  Makes it a lot easier to use this function in a (->) pipeline"
+  [graph-uri triples]
   (map (partial quad graph-uri)
        (apply triplify triples)))
 
