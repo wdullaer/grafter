@@ -446,8 +446,11 @@
 
 (extend-protocol pr/ITripleWriteable
   RDFWriter
-  (pr/add-statement [this statement]
-    (.handleStatement this (->sesame-rdf-type statement)))
+  (pr/add-statement
+    ([this statement]
+      (.handleStatement this (->sesame-rdf-type statement)))
+    ([this _ statement]
+      (.handleStatement this (->semame-rdf-type statement))))
 
   (pr/add
     ([this triples]
